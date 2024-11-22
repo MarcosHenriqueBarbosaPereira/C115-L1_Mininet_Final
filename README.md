@@ -12,6 +12,7 @@ Repository for my final homework for Mininet tool for C115 subject.
     - [Topology Net](#topology-net)
     - [Logical Ports Addresses](#logical-ports-addresses)
     - [Hosts Data](#hosts-data)
+    - [Topology Image](#topology-image)
   - [4- Ping Test for all Nodes](#4--ping-test-for-all-nodes)
   - [5- Server-Client Test](#5--server-client-test)
     - [Setting Host1 as Server and Host2 as Client](#setting-host1-as-server-and-host2-as-client)
@@ -22,6 +23,20 @@ Repository for my final homework for Mininet tool for C115 subject.
     - [Host-Client 20Mbps](#host-client-20mbps)
     - [Host-Client 25Mbps](#host-client-25mbps)
 - [Activity 2](#activity-2)
+  - [1- Custom Topology Code](1--custom-topology-code)
+  - [2- Creating the Custom Topology](#2--creating-the-custom-topology)
+  - [3- Inspecting Custom Topology Information](#3--inspecting-custom-topology-information)
+    - [Custom Topology Nodes](#custom-topology-nodes)
+    - [Custom Topology Net](#custom-topology-net)
+    - [Custom Logical Ports Addresses](#custom-logical-ports-addresses)
+    - [Custom Hosts Data](#custom-hosts-data)
+    - [Custom Topology Image](#custom-topology-image)
+  - [4- Ping Test for all Custom Nodes](#4--ping-test-for-all-custom-nodes)
+  - [5- Recreating Rules](#5--recreating-rules)
+    - [Deleting Existing Rules](#deleting-existing-rules)
+    - [Creating Rules for h1-h4 Communication](#creating-rules-for-h1-h4-communication)
+  - [6- Ping Test for New Rules](#6--ping-test-for-new-rules)
+- [About](#about)
 
 ---
 
@@ -79,6 +94,11 @@ Consider a linear topology with eight hosts.
 ![Hosts Info h5-h6](images/putty/ifconfig-h5-h6.png)
 ![Hosts Info h7-h8](images/putty/ifconfig-h7-h8.png)
 
+---
+
+#### Topology Image
+
+![Topology Miniedit Image](images/miniedit/topology-image.png)
 
 ---
 
@@ -135,7 +155,95 @@ Consider a linear topology with eight hosts.
 
 ## Activity 2
 
-*Placeholder for upcoming activity details.*
+### Proposal
+
+The following text describes the proposal for this activity:
+
+```text
+Consider a custom topology with multiple hosts and switches:
+  - Use Mininet's standard command line to create the topology with standardized MAC addresses and a manual controller configuration.
+  - Inspect the interfaces, MAC, IP, and port addresses via command-line tools.
+  - Create a visual representation of the topology, including all information obtained in the inspection step.
+  - Perform ping tests between all nodes using normal switch configurations to verify connectivity.
+  - Delete the existing flow rules and create new rules based on MAC addresses for specific nodes, ensuring communication between hosts connected to different switches.
+  - Perform ping tests to demonstrate that the new MAC-based rules were successfully implemented.
+```
+
+![Reference Image for the Topology](images/miniedit-python/topology-image.png)
+
+---
+
+### 1- Custom Topology Code
+
+The following code can be found in this project, located in [custom_topo.py](python/custom_topo.py).
+
+![Custom Topology Code](images/putty-python/custom-topo-code.png)
+
+---
+
+### 2- Creating the Custom Topology
+
+![Creating the Custom Topology](images/putty-python/creating-topology.png)
+
+---
+
+### 3- Inspecting Custom Topology Information
+
+#### Custom Topology Nodes
+
+![Custom Topology Nodes](images/putty-python/nodes.png)
+
+---
+
+#### Custom Topology Net
+
+![Custom Topology Net](images/putty-python/net.png)
+
+---
+
+#### Custom Logical Ports Addresses
+
+![Custom Logical Ports Addresses](images/putty-python/dump.png)
+
+---
+
+#### Custom Hosts Data
+
+![Custom Hosts Info h1-h2-h3](images/putty-python/ifconfig-h1-h2-h3.png)
+![Custom Hosts Info h4-h5](images/putty-python/ifconfig-h4-h5.png)
+![Custom Hosts Info h6-h7](images/putty-python/ifconfig-h6-h7.png)
+
+---
+
+#### Custom Topology Image
+
+![Custom Topology Spear Image](images/spear/topology-image.png)
+
+---
+
+### 4- Ping Test for all Custom Nodes
+
+![PingAll Test for Custom Nodes](images/putty-python/pingall.png)
+
+---
+
+### 5- Recreating Rules
+
+#### Deleting Existing Rules
+
+![Deleted Rules](images/xterm-python/deleted-rules.png)
+
+---
+
+#### Creating Rules for h1-h4 Communication
+
+![Rules h1-h4](images/xterm-python/rules-h1-h4.png)
+
+---
+
+### 6- Ping Test for New Rules
+
+![Ping h1-h4 new rules](images/xterm-python/ping-h1-h4.png)
 
 ---
 
